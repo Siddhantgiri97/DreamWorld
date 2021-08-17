@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<main class="main">
+    <div class="swiper-container gallery-top">
+        <div class="swiper-wrapper">
+            <section class="automobiles swiper-slide">
+                <img src="{% static 'images/c6.jpg' %}" alt="" class="automobiles__bg">
+
+                <div class="automobiles__container bd-container">
+                    <div class="automobiles__data">
+                        <h2 class="automobiles__subtitle">
+                            Automotives
+                        </h2>
+                        <h1 class="automobiles__title">
+                            Audi
+                        </h1>
+                        <p class="automobiles__description">Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit.
+                            Asperiores, nemo quis! Cupiditate repellat reiciendis doloremque asperiores nostrum,
+                            aperiam deleniti impedit pariatur mollitia ratione quibusdam esse eaque ab </p>
+                        <a href="{% url 'cars_home' %}" class="automobiles__button">Explore <i
+                                class="bx bx-right-arrow-alt automobiles__button-icon"></i></a>
+
+                    </div>
+                    <div class="automobiles__video">
+                        <div class="automobiles__video-content">
+                            <i class="bx bx-play-circle automobiles__video-icon">
+
+                            </i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="automobiles swiper-slide">
+                <img src="{% static 'images/c5.jpg' %}" alt="" class="automobiles__bg">
+
+                <div class="automobiles__container bd-container">
+                    <div class="automobiles__data">
+                        <h2 class="automobiles__subtitle">
+                            Automotives
+                        </h2>
+                        <h1 class="automobiles__title">
+                            Lamborghini
+                        </h1>
+                        <p class="automobiles__description">Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit.
+                            Asperiores, nemo quis! Cupiditate repellat reiciendis doloremque asperiores nostrum,
+                            aperiam deleniti impedit pariatur mollitia ratione quibusdam esse eaque ab </p>
+                        <a href="{% url 'bikes_home' %}" class="automobiles__button">Explore <i
+                                class="bx bx-right-arrow-alt automobiles__button-icon"></i></a>
+
+                    </div>
+                    <div class="automobiles__video">
+                        <div class="automobiles__video-content">
+                            <i class="bx bx-play-circle automobiles__video-icon">
+
+                            </i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="automobiles swiper-slide">
+                <img src="{% static 'images/c4.jpg' %}" alt="" class="automobiles__bg">
+
+                <div class="automobiles__container bd-container">
+                    <div class="automobiles__data">
+                        <h2 class="automobiles__subtitle">
+                            Automotives
+                        </h2>
+                        <h1 class="automobiles__title">
+                            Ferrari
+                        </h1>
+                        <p class="automobiles__description">Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit.
+                            Asperiores, nemo quis! Cupiditate repellat reiciendis doloremque asperiores nostrum,
+                            aperiam deleniti impedit pariatur mollitia ratione quibusdam esse eaque ab </p>
+                        <a href="{% url 'heavymotors_home' %}" class="automobiles__button">Explore <i
+                                class="bx bx-right-arrow-alt automobiles__button-icon"></i></a>
+
+                    </div>
+                    <div class="automobiles__video">
+                        <div class="automobiles__video-content">
+                            <i class="bx bx-play-circle automobiles__video-icon">
+
+                            </i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="automobiles__popup" id="popup">
+                <div>
+                    <div class="automobiles__popup-close" id="popup-close">
+                        <i class="bx bx-x">
+
+                        </i>
+                    </div>
+                    <iframe class="automobiles__popup-video" src="https://youtube.com/embed/pFFE4nEZKYc" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="controls gallery-thumbs">
+        <div class="controls__container swiper-wrapper">
+            <img src="{% static 'images/c6.jpg' %}" alt="" class="controls__img swiper-slide">
+            <img src="{% static 'images/c5.jpg' %}" alt="" class="controls__img swiper-slide">
+            <img src="{% static 'images/c4.jpg' %}" alt="" class="controls__img swiper-slide">
+        </div>
+    </div>
+</main>
+{% endblock content %}
+
+
+{% block script %}
+<script src="{% static 'js/gsap.min.js' %}"></script>
+<script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+
+
+
+<script src="{% static 'js/main.js' %}"></script>
+{% endblock script %}

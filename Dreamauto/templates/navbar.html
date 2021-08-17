@@ -1,0 +1,50 @@
+{% load static %}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+
+
+<header class="header">
+    <nav class="nav bd-container">
+        <a href="" class="nav__logo">Dream Auto</a>
+
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="{% url 'home' %}" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="{% url 'about' %}" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="{% url 'whatsnew' %}" class="nav__link">What's new</a></li>
+                <li class="nav__item"><a href="{% url 'contact' %}" class="nav__link">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+            <i class="bx bx-menu"></i>
+        </div>
+    </nav>
+</header>
+
+
+
+
+
+<script type="text/javascript">
+    /*==================== SHOW MENU ====================*/
+    const showMenu = (toggleId, navId) => {
+        const toggle = document.getElementById(toggleId),
+            nav = document.getElementById(navId)
+
+        // Validate that variables exist
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                // We add the show-menu class to the div tag with the nav__menu class
+                nav.classList.toggle('show-menu')
+            })
+        }
+    }
+
+    showMenu('nav-toggle', 'nav-menu')
+
+</script>
